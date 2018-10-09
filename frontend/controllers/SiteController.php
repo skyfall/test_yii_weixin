@@ -13,7 +13,7 @@ class SiteController extends Controller
 	public $enableCsrfValidation = false;
 	
 	
-	public function acionWxMessage(){
+	public function actionWxMessage(){
 		/**
 		 * @var weixin $weixin
 		 */
