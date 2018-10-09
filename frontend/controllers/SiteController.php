@@ -18,8 +18,11 @@ class SiteController extends Controller
 		 * @var weixin $weixin
 		 */
 		$weixin = \Yii::$app->weixin;
-		
-		$ResponseText = $weixin->getResponse()->getResponseText();
+		$weixin->getMessageTxtArr();
+		if ($weixin->MsgType === false){
+			return \Yii::$app->request->get('echostr');
+		}
+		$ResponseText = $weixin->getResponse();
 		$ResponseText->Content = time();
 		return $ResponseText->getResponse();
 	}
