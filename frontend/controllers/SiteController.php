@@ -24,7 +24,7 @@ class SiteController extends Controller
 		if (!$weixin->MsgType){
 			return \Yii::$app->request->get('echostr');
 		}
-		$ResponseText = $weixin->getResponse();
+		$ResponseText = $weixin->getResponse()->getResponseText();
 		$ResponseText->Content = time();
 		return $ResponseText->getResponse();
 	}
