@@ -50,7 +50,8 @@ return [
         		'class'=>'sunlsoft\yiiweixin\weixin',
         		'appid'=>'wx3929189dbf11f00c',
         		'EncodingAESKey'=>'LC3ljU7Zbx7MmolgR1i5EQKrueio2WxaS7cYVsDcA9x',
-        		'Token'=>'jdprice'
+        		'Token'=>'jdprice',
+        		'EncodingType'=>2
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,
