@@ -41,6 +41,13 @@ return [
         			//'categories' => ['application'],
         			'logFile' => '@runtime/logs/'.date('Ymd').'warning.log',
         		],
+        		[
+        			'class' => 'yii\log\FileTarget',
+        			'levels' => ['info'],
+        			'logVars' => ['_GET', '_POST', '_FILES', '_COOKIE', '_SESSION', '_SERVER'],
+        			//'categories' => ['application'],
+        			'logFile' => '@runtime/logs/'.date('Ymd').'info.log',
+        		]
         	],
         ],
         'errorHandler' => [
